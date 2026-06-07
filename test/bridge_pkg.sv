@@ -30,10 +30,4 @@ import uvm_pkg::*;
 `include "env.sv"
 `include "test.sv"
 
-
-
-
-
-
-
 endpackage
