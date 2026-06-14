@@ -1,33 +1,38 @@
 package bridge_pkg;
 
 import uvm_pkg::*;
-`include "definitions.v"
-`include "uvm_macros.svh"
 
-`include "apb_config.sv"
-`include "ahb_config.sv"
-`include "env_config.sv"
+        `include "uvm_macros.svh"
 
-`include "apb_trans.sv"
-`include "apb_monitor.sv"
-`include "apb_sequencer.sv"
-`include "apb_driver.sv"
-`include "apb_agent.sv"
-`include "apb_agent_top.sv"
+        `include "src_xtn.sv"
+        `include "ms_agent_config.sv"
+        `include "slv_agent_config.sv"
+        `include "bridge_env_config.sv"
 
-`include "ahb_trans.sv"
-`include "ahb_seqs.sv"
-`include "ahb_monitor.sv"
-`include "ahb_sequencer.sv"
-`include "ahb_driver.sv"
-`include "ahb_agent.sv"
-`include "ahb_agent_top.sv"
+        `include "src_driver.sv"
+        `include "ms_monitor.sv"
+        `include "src_sequencer.sv"
+        `include "ms_agent.sv"
+        `include "ms_agent_top.sv"
+        `include "src_sequence.sv"
 
-`include "scoreboard.sv"
-`include "virtual_sequencer.sv"
-`include "virtual_seqs.sv"
+        `include "slv_xtn.sv"
+        `include "slv_monitor.sv"
+        `include "slv_sequencer.sv"
+        `include "slv_sequence.sv"
+        `include "slv_driver.sv"
+        `include "slv_agent.sv"
+        `include "slv_agent_top.sv"
 
-`include "env.sv"
-`include "test.sv"
+        `include "virtual_sequencer.sv"
+        `include "virtual_seqs.sv"
+        `include "scoreboard.sv"
+
+        `include "tb.sv"
+
+        `include "bridge_test.sv"
+
+
+
 
 endpackage
